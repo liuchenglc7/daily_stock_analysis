@@ -403,7 +403,7 @@ jobs:
           STOCK_LIST_CONFIG: ${{ vars.STOCK_LIST || secrets.STOCK_LIST }}
           MARKET_REVIEW_REGION: ${{ vars.MARKET_REVIEW_REGION || secrets.MARKET_REVIEW_REGION || 'cn' }}
           MARKET_REVIEW_COLOR_SCHEME: ${{ vars.MARKET_REVIEW_COLOR_SCHEME || secrets.MARKET_REVIEW_COLOR_SCHEME || 'green_up' }}
-          
+          YFINANCE_PRIORITY: ${{ vars.YFINANCE_PRIORITY || secrets.YFINANCE_PRIORITY || '4' }}
           # ==========================================
           # 运行配置 ⬅️ 新增！
           # ==========================================
