@@ -3,9 +3,13 @@ name: 每日股票分析
 on:
   # 定时触发 - 每天北京时间 18:00 (UTC 10:00)
   schedule:
-    - cron: '30 13 * * *'    # 每天 UTC 13:30 = 阿布扎比 17:30
-    - cron: '0 17 * * *'     # 每天 UTC 17:00 = 阿布扎比 21:00
-    - cron: '30 19 * * *'    # 每天 UTC 19:30 = 阿布扎比 23:30
+    # 美东 09:37 开盘后 / 12:00 盘中 / 15:37 收盘前
+    - cron: '37 9 * * 1-5'
+      timezone: America/New_York
+    - cron: '0 12 * * 1-5'
+      timezone: America/New_York
+    - cron: '37 15 * * 1-5'
+      timezone: America/New_York
   # 手动触发
   workflow_dispatch:
     inputs:
